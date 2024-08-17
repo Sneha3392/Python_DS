@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hematological Parameter Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Hematological Parameter Prediction</h1>
+        <form action="/predict" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="SEX">Sex</label>
+                <select class="form-control" id="SEX" name="SEX" required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="AGE">Age</label>
+                <input type="number" class="form-control" id="AGE" name="AGE" required>
+            </div>
+            <div class="form-group">
+                <label for="HAEMATOCRIT">Haematocrit</label>
+                <input type="number" step="0.01" class="form-control" id="HAEMATOCRIT" name="HAEMATOCRIT" required>
+            </div>
+            <div class="form-group">
+                <label for="HAEMOGLOBINS">Haemoglobins</label>
+                <input type="number" step="0.01" class="form-control" id="HAEMOGLOBINS" name="HAEMOGLOBINS" required>
+            </div>
+            <div class="form-group">
+                <label for="ERYTHROCYTE">Erythrocyte</label>
+                <input type="number" step="0.01" class="form-control" id="ERYTHROCYTE" name="ERYTHROCYTE" required>
+            </div>
+            <div class="form-group">
+                <label for="LEUCOCYTE">Leucocyte</label>
+                <input type="number" step="0.01" class="form-control" id="LEUCOCYTE" name="LEUCOCYTE" required>
+            </div>
+            <div class="form-group">
+                <label for="THROMBOCYTE">Thrombocyte</label>
+                <input type="number" step="0.01" class="form-control" id="THROMBOCYTE" name="THROMBOCYTE" required>
+            </div>
+            <div class="form-group">
+                <label for="MCH">MCH</label>
+                <input type="number" step="0.01" class="form-control" id="MCH" name="MCH" required>
+            </div>
+            <div class="form-group">
+                <label for="MCHC">MCHC</label>
+                <input type="number" step="0.01" class="form-control" id="MCHC" name="MCHC" required>
+            </div>
+            <div class="form-group">
+                <label for="MCV">MCV</label>
+                <input type="number" step="0.01" class="form-control" id="MCV" name="MCV" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        {% if predictions %}
+        <h2 class="mt-5">Predictions</h2>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Haematocrit</td>
+                    <td>{{ predictions['HAEMATOCRIT_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>Haemoglobins</td>
+                    <td>{{ predictions['HAEMOGLOBINS_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>Erythrocyte</td>
+                    <td>{{ predictions['ERYTHROCYTE_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>Leucocyte</td>
+                    <td>{{ predictions['LEUCOCYTE_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>Thrombocyte</td>
+                    <td>{{ predictions['THROMBOCYTE_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>MCH</td>
+                    <td>{{ predictions['MCH_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>MCHC</td>
+                    <td>{{ predictions['MCHC_CATEGORY'] }}</td>
+                </tr>
+                <tr>
+                    <td>MCV</td>
+                    <td>{{ predictions['MCV_CATEGORY'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if recommendations %}
+	
+        <h2 class="mt-5">Treatment Recommendations</h2>
+        <div class="accordion" id="recommendationsAccordion">
+            {% for param, recommendation in recommendations.items() %}
+            <div class="card">
+                <div class="card-header" id="heading{{ param }}">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ param }}" aria-expanded="true" aria-controls="collapse{{ param }}">
+                            {{ param.replace('_CATEGORY', '').capitalize() }}
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse{{ param }}" class="collapse" aria-labelledby="heading{{ param }}" data-parent="#recommendationsAccordion">
+                    <div class="card-body">
+                        <strong>Diagnosis:</strong> {{ recommendation['Diagnosis'] }}<br>
+                        <strong>Treatment:</strong> {{ recommendation['Treatment'] }}<br>
+                        <strong>Likelihood of Improvement:</strong> {{ recommendation['Likelihood of Improvement'] }}<br>
+                        <strong>Risk Assessment:</strong> {{ recommendation['Risk Assessment'] }}<br>
+                        <strong>Key Factors:</strong> {{ recommendation['Key Factors'] }}<br>
+                        <strong>Next Lab Test:</strong> {{ recommendation['Next Lab Test'] }}<br>
+                        <strong>Follow-up Appointment:</strong> {{ recommendation['Follow-up Appointment'] }}<br>
+                        <strong>Informed Consent:</strong> {{ recommendation['Informed Consent'] }}<br>
+                        <strong>Patient Compliance:</strong> {{ recommendation['Patient Compliance'] }}<br>
+                        <strong>Side Effects:</strong> {{ recommendation['Side Effects'] }}<br>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

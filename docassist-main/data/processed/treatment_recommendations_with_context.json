@@ -1,0 +1,12 @@
+{
+    "Diagnosis": "Thrombocytosis possibly due to inflammation or myeloproliferative disorders likely due to thrombocyte being high. | Microcytic Anemia likely due to mch being low. | Anemia or Bone Marrow Suppression likely due to erythrocyte being low. | Microcytic Anemia or Iron Deficiency likely due to mcv being low. | Polycythemia Vera likely due to haematocrit being high.",
+    "Treatment": "Consider iron supplementation; investigate possible iron deficiency. | Recommend phlebotomy or other measures to reduce blood viscosity. | Investigate underlying cause; consider aspirin therapy or cytoreduction. | Consider iron supplementation, bone marrow biopsy if indicated.",
+    "Likelihood of Improvement": "Moderate with appropriate treatment | Varies with cause | High with treatment | Moderate with treatment",
+    "Risk Assessment": "Risk of thrombosis | Risk of fatigue, developmental delays | Risk of fatigue, pallor | Risk of thrombosis if untreated",
+    "Key Factors": "Low MCH indicating smaller red blood cells | Low erythrocyte count | Low MCV indicating smaller red blood cells | Elevated platelet count | Elevated red blood cell count",
+    "Next Lab Test": "CBC in 1 month | CBC, platelet function tests | Iron studies, CBC in 1 month | Iron studies, CBC, bone marrow biopsy if indicated",
+    "Follow-up Appointment": "In 1 month",
+    "Informed Consent": "Discuss the need for supplementation | Discuss risks of thrombosis and treatment options | Discuss risks and benefits of phlebotomy | Discuss potential causes and treatments",
+    "Patient Compliance": "Monitor adherence to supplements | Monitor for adherence to treatment | Monitor for signs of fatigue, adherence to treatment | Monitor for adherence to aspirin or other therapies",
+    "Side Effects": "Possible fatigue, dizziness after phlebotomy | Risk of bleeding with aspirin, fatigue with cytoreductive therapy | Gastrointestinal discomfort from iron supplements | GI discomfort with iron supplements, risk of infection post-biopsy"
+}

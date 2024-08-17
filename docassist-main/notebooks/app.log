@@ -1,0 +1,7 @@
+2024-08-17 15:49:06,247 - DEBUG - This is a debug message
+2024-08-17 15:49:06,255 - INFO - This is an info message
+2024-08-17 15:49:06,255 - WARNING - This is a warning message
+2024-08-17 15:49:06,255 - ERROR - This is an error message
+2024-08-17 15:49:06,255 - CRITICAL - This is a critical message
+2024-08-17 15:53:43,821 - DEBUG - Logger is set up in Jupyter Notebook
+2024-08-17 15:54:33,857 - DEBUG - Logger is set up in Jupyter Notebook

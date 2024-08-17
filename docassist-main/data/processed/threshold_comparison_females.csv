@@ -1,0 +1,9 @@
+Parameter,Female Lower Percentile Threshold,Female Upper Percentile Threshold,Real World Lower Threshold (Female),Real World Upper Threshold (Female)
+HAEMATOCRIT,27.825,43.4,35.5,44.9
+HAEMOGLOBINS,9.0,14.4,12.1,15.1
+ERYTHROCYTE,3.23,5.387499999999999,4.2,5.4
+LEUCOCYTE,3.0,16.675,4.0,11.0
+THROMBOCYTE,82.25,437.0,150.0,450.0
+MCH,22.125,31.5,27.0,31.0
+MCHC,30.9,34.8,32.0,36.0
+MCV,70.525,94.5,80.0,100.0
