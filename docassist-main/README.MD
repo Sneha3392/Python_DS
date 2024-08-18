@@ -1,4 +1,4 @@
-
+## Please refer to the project document for detailed documentation of the steps
 ## Model Development Findings: Logistic Regression
 
 During the development and evaluation of the Logistic Regression model, several key observations were made:

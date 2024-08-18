@@ -1,12 +1,98 @@
 {
-    "Diagnosis": "Thrombocytosis possibly due to inflammation or myeloproliferative disorders likely due to thrombocyte being high. | Microcytic Anemia likely due to mch being low. | Anemia or Bone Marrow Suppression likely due to erythrocyte being low. | Microcytic Anemia or Iron Deficiency likely due to mcv being low. | Polycythemia Vera likely due to haematocrit being high.",
-    "Treatment": "Consider iron supplementation; investigate possible iron deficiency. | Recommend phlebotomy or other measures to reduce blood viscosity. | Investigate underlying cause; consider aspirin therapy or cytoreduction. | Consider iron supplementation, bone marrow biopsy if indicated.",
-    "Likelihood of Improvement": "Moderate with appropriate treatment | Varies with cause | High with treatment | Moderate with treatment",
-    "Risk Assessment": "Risk of thrombosis | Risk of fatigue, developmental delays | Risk of fatigue, pallor | Risk of thrombosis if untreated",
-    "Key Factors": "Low MCH indicating smaller red blood cells | Low erythrocyte count | Low MCV indicating smaller red blood cells | Elevated platelet count | Elevated red blood cell count",
-    "Next Lab Test": "CBC in 1 month | CBC, platelet function tests | Iron studies, CBC in 1 month | Iron studies, CBC, bone marrow biopsy if indicated",
-    "Follow-up Appointment": "In 1 month",
-    "Informed Consent": "Discuss the need for supplementation | Discuss risks of thrombosis and treatment options | Discuss risks and benefits of phlebotomy | Discuss potential causes and treatments",
-    "Patient Compliance": "Monitor adherence to supplements | Monitor for adherence to treatment | Monitor for signs of fatigue, adherence to treatment | Monitor for adherence to aspirin or other therapies",
-    "Side Effects": "Possible fatigue, dizziness after phlebotomy | Risk of bleeding with aspirin, fatigue with cytoreductive therapy | Gastrointestinal discomfort from iron supplements | GI discomfort with iron supplements, risk of infection post-biopsy"
+    "HAEMATOCRIT_CATEGORY": {
+        "Diagnosis": "Polycythemia Vera",
+        "Treatment": "Recommend phlebotomy or other measures to reduce blood viscosity.",
+        "Likelihood of Improvement": "High with treatment",
+        "Risk Assessment": "Risk of thrombosis if untreated",
+        "Key Factors": "Elevated red blood cell count",
+        "Next Lab Test": "CBC in 1 month",
+        "Follow-up Appointment": "In 1 month",
+        "Informed Consent": "Discuss risks and benefits of phlebotomy",
+        "Patient Compliance": "Monitor for adherence to treatment",
+        "Side Effects": "Possible fatigue, dizziness after phlebotomy"
+    },
+    "HAEMOGLOBINS_CATEGORY": {
+        "Diagnosis": "Normal Hemoglobin",
+        "Treatment": "No intervention needed; routine follow-up.",
+        "Likelihood of Improvement": "Stable",
+        "Risk Assessment": "Low",
+        "Key Factors": "Maintaining normal hemoglobin levels",
+        "Next Lab Test": "Routine CBC in 6 months",
+        "Follow-up Appointment": "In 6 months",
+        "Informed Consent": "Not required",
+        "Patient Compliance": "Routine follow-up",
+        "Side Effects": "None"
+    },
+    "ERYTHROCYTE_CATEGORY": {
+        "Diagnosis": "Anemia or Bone Marrow Suppression",
+        "Treatment": "Consider iron supplementation, bone marrow biopsy if indicated.",
+        "Likelihood of Improvement": "Varies with cause",
+        "Risk Assessment": "Risk of fatigue, pallor",
+        "Key Factors": "Low erythrocyte count",
+        "Next Lab Test": "Iron studies, CBC, bone marrow biopsy if indicated",
+        "Follow-up Appointment": "In 1 month",
+        "Informed Consent": "Discuss potential causes and treatments",
+        "Patient Compliance": "Monitor for signs of fatigue, adherence to treatment",
+        "Side Effects": "GI discomfort with iron supplements, risk of infection post-biopsy"
+    },
+    "LEUCOCYTE_CATEGORY": {
+        "Diagnosis": "No specific diagnosis found",
+        "Treatment": "No specific treatment guideline found",
+        "Likelihood of Improvement": "Unknown",
+        "Risk Assessment": "Unknown",
+        "Key Factors": "None",
+        "Next Lab Test": "None",
+        "Follow-up Appointment": "None",
+        "Informed Consent": "None",
+        "Patient Compliance": "None",
+        "Side Effects": "None"
+    },
+    "THROMBOCYTE_CATEGORY": {
+        "Diagnosis": "No specific diagnosis found",
+        "Treatment": "No specific treatment guideline found",
+        "Likelihood of Improvement": "Unknown",
+        "Risk Assessment": "Unknown",
+        "Key Factors": "None",
+        "Next Lab Test": "None",
+        "Follow-up Appointment": "None",
+        "Informed Consent": "None",
+        "Patient Compliance": "None",
+        "Side Effects": "None"
+    },
+    "MCH_CATEGORY": {
+        "Diagnosis": "No specific diagnosis found",
+        "Treatment": "No specific treatment guideline found",
+        "Likelihood of Improvement": "Unknown",
+        "Risk Assessment": "Unknown",
+        "Key Factors": "None",
+        "Next Lab Test": "None",
+        "Follow-up Appointment": "None",
+        "Informed Consent": "None",
+        "Patient Compliance": "None",
+        "Side Effects": "None"
+    },
+    "MCHC_CATEGORY": {
+        "Diagnosis": "Normal MCHC",
+        "Treatment": "No intervention needed; routine follow-up.",
+        "Likelihood of Improvement": "Stable",
+        "Risk Assessment": "Low",
+        "Key Factors": "Maintaining normal MCHC levels",
+        "Next Lab Test": "Routine CBC in 6 months",
+        "Follow-up Appointment": "In 6 months",
+        "Informed Consent": "Not required",
+        "Patient Compliance": "Routine follow-up",
+        "Side Effects": "None"
+    },
+    "MCV_CATEGORY": {
+        "Diagnosis": "Microcytic Anemia or Iron Deficiency",
+        "Treatment": "Consider iron supplementation; investigate possible iron deficiency.",
+        "Likelihood of Improvement": "Moderate with treatment",
+        "Risk Assessment": "Risk of fatigue, developmental delays",
+        "Key Factors": "Low MCV indicating smaller red blood cells",
+        "Next Lab Test": "Iron studies, CBC in 1 month",
+        "Follow-up Appointment": "In 1 month",
+        "Informed Consent": "Discuss the need for supplementation",
+        "Patient Compliance": "Monitor adherence to supplements",
+        "Side Effects": "Gastrointestinal discomfort from iron supplements"
+    }
 }
